@@ -1,0 +1,38 @@
+package mypackage;
+
+class EnglishMessage
+{
+	public void sayHi()
+	{
+		System.out.println("Hi");
+	}
+	public void sayHello()
+	{
+		System.out.println("Hello");
+	}
+	public void sayGoodMorning()
+	{
+		System.out.println("Good Morning");
+	}
+}
+
+class HindiMessage extends EnglishMessage
+{	
+	@Override
+	public void sayGoodMorning()
+	{
+		System.out.println("Shubodhay");
+	}
+}
+
+public class MyClass 
+{
+	public static void main(String[] args)
+	{
+		EnglishMessage em = new EnglishMessage();
+		em.sayGoodMorning();
+		
+		HindiMessage hm = new HindiMessage();
+		hm.sayGoodMorning();
+	}
+}
